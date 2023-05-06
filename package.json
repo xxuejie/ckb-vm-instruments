@@ -5,7 +5,8 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "npx tsc",
-    "fmt": "npx prettier -w src/*.ts"
+    "fmt": "npx prettier -w src/*.ts",
+    "prepublishOnly": "npm run build"
   },
   "author": "Xuejie Xiao",
   "license": "MIT",
