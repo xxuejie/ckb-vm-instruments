@@ -12,7 +12,7 @@ You might need to build ckb-vm-instruments library first since the examples here
 
 ```
 cd ..; npm run build
-cd examples; npm i
+cd examples; npx yarn
 ```
 
 Now you can use the examples included here, for JS examples:
