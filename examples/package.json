@@ -1,0 +1,18 @@
+{
+  "name": "ckb-vm-instruments-examples",
+  "version": "0.1.0",
+  "description": "Examples on using ckb-vm-instruments",
+  "author": "Xuejie Xiao",
+  "license": "MIT",
+  "scripts": {
+    "build": "npx tsc",
+    "fmt": "npx prettier -w js/*.js ts/*.ts"
+  },
+  "dependencies": {
+    "async-main": "^1.0.2",
+    "ckb-vm-instruments": "../",
+    "commander": "^10.0.1",
+    "elf-tools": "^1.1.2"
+  },
+  "devDependencies": {}
+}

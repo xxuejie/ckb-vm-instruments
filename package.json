@@ -1,0 +1,20 @@
+{
+  "name": "ckb-vm-instruments",
+  "version": "0.1.0",
+  "description": "An instrument toolkit for CKB-VM smart contracts",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "fmt": "npx prettier -w src/*.ts"
+  },
+  "author": "Xuejie Xiao",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^14.0.27",
+    "promise-socket": "^7.0.0",
+    "typescript": "^5.0.4"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.8"
+  }
+}
