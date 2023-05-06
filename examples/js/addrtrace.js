@@ -7,7 +7,10 @@ program
   .description("tools for checking SP register")
   .option("--port [port]", "Port to connect to", (port) => Number(port), 2000)
   .option("--address [address]", "Address to connect to", "localhost")
-  .requiredOption("--vm-address [vm_address]", "Program address to trace")
+  .requiredOption(
+    "--vm-addresses [vm_addresses]",
+    "Comma separated program addresses to trace"
+  )
   .requiredOption("--vm-regs [regs]", "Comma separated registers to trace");
 program.parse();
 const opts = program.opts();
@@ -15,7 +18,7 @@ const opts = program.opts();
 main(async () => {
   const c = await Connection.connect(`${opts.address}:${opts.port}`);
 
-  const addresses = [BigInt(opts.vmAddress)];
+  const addresses = opts.vmAddresses.split(",").map((a) => BigInt(a));
   const regs = opts.vmRegs.split(",");
   await c.at(addresses, async function (inspector) {
     const pc = await inspector.pc();
