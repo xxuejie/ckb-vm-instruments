@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "An instrument toolkit for CKB-VM smart contracts",
   "main": "lib/index.js",
+  "engines": {
+    "node": ">= 18.0.0"
+  },
   "scripts": {
     "build": "npx tsc",
     "fmt": "npx prettier -w src/*.ts",
