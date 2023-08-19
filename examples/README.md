@@ -1,6 +1,14 @@
 # Usage
 
-First, compile ckb-debugger code with changes in this [PR](https://github.com/nervosnetwork/ckb-standalone-debugger/pull/80).
+For now, this project requires ckb-debugger using [gdbstub](https://github.com/daniel5151/gdbstub) as the underlying gdb engine. You can build one yourself using the following command:
+
+```
+$ git clone https://github.com/nervosnetwork/ckb-standalone-debugger
+$ cd ckb-standalone-debugger
+$ cargo build --release --features=gdbstub_impl --package ckb-debugger
+```
+
+The compiled binary can be found at `./target/release/ckb-debugger`
 
 When launching ckb-debugger, make sure to use `gdb` mode, for example:
 
